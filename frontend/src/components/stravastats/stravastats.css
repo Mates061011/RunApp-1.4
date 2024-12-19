@@ -1,0 +1,178 @@
+body {
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+.table-container {
+  margin-bottom: 100px;
+}
+.chart-container {
+  width: 100%;
+  padding: 30px 10px;
+  background-color: #E5E5E5;
+  border-radius: 30px;
+}
+.week-header2 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.collapsed {
+  transform: translateX(-347px);
+  height: 53px;
+  transition: 300ms;
+  .year {
+    opacity: 0;
+  }
+}
+.container {
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: black;
+  table {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-spacing: 0; 
+    thead {
+      background-color: #E5E5E5;
+    }
+  }
+}
+.container table thead > tr > th:not(:last-child),.container table tbody > tr > td:not(:last-child) {
+  border-right: 1px solid #C5C0C0;
+}
+tbody tr:nth-child(even) {
+  background-color: #E5E5E5;
+}
+tbody{
+  border-radius: 20px;
+
+  tr{
+    background-color: #D2D2D2;
+    height: 70px;
+  }
+}
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 30px;
+}
+table thead>tr:last-child th:last-child {
+  border-top-right-radius: 30px;
+}
+table thead>tr:last-child th:first-child {
+  border-top-left-radius: 30px;
+}
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 30px;
+}
+thead>tr {
+  height: 70px;
+}
+
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  color: #fc4c02;
+  border-bottom: 2px solid #fc4c02;
+  padding-bottom: 5px;
+}
+
+h4 {
+  margin-top: 20px;
+}
+.chart-container {
+  height: 500px;
+  canvas {
+    width: 1100px;
+  }
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better height */
+  text-align: center;
+  min-height: 50px; /* Minimum height for rows */
+}
+
+.table th {
+  background-color: #fc4c02;
+  color: white;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.table tr:hover td {
+  color: black; /* Ensures text color changes on hover */
+}
+
+.checkbox-label {
+  display: block;
+  margin: 5px 0;
+}
+
+.checkbox-label input {
+  margin-right: 5px;
+}
+
+.emptyButton {
+  background-color: transparent;
+  color: black;
+}
+
+
+/*week selection */
+.week-selection {
+  transition: 300ms;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #FC5200;
+  border-radius:  0 20px 20px 0;
+  width: 380px;
+  padding: 10px 0 10px 40px;
+  h3 {
+    border: none;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  h4 {
+    margin: 0;
+    font-weight: 500;
+    font-size: larger;
+    color: #000000;
+    opacity: 0.5;
+  }
+}
+.weeks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 5px 0 15px;
+  div {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 20px;
+    align-items: center;
+    label {
+      padding: 0;
+    }
+  }
+}

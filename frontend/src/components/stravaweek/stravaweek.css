@@ -1,0 +1,310 @@
+/* stravaweek.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+.week-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    translate: 0 150px;
+}
+
+.week-container {
+    display: table; /* Use table layout */
+    border-collapse: collapse; /* Collapse borders */
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.week-header {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    
+    button {
+        transform: translateY(-12px);
+        padding: 0 auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 35px;
+        background-color: transparent;
+        border: 2px solid #FC5200;
+        color: black;
+        outline: none;
+        width: 100px;
+    }
+}
+
+.week-switch {
+    display: flex;
+    gap: 10px;
+    img {
+        width: 14px;
+        height: 7.5px;
+    }
+    h2 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 600;
+        color: black;
+        transform:  translateY(-26px);
+    }
+}
+.arrow1 {
+    transform: rotate(90deg);
+}
+.arrow2 {
+    transform: rotate(-90deg);
+}
+
+.day-slot {
+    
+    display: table-cell; /* Make each day a table cell */
+    background-color: white;
+    border: 1px solid #DADADA; /* Solid borders for each day */
+    border-bottom: none; /* Remove the bottom border */
+    border-top: none;
+    border-radius: 0; /* Remove border radius for a table effect */
+    text-align: center;
+    position: relative;
+    height: 300px;
+    width: fit-content;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    min-width: 190px;
+    .date {
+        translate: 0 -39px;
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .day {
+        translate: 0 -20px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -1.5px;
+    }
+}
+.task.selected {
+    transform: scale(0.8);
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #DADADA;
+    transform: translateY(50px);
+    z-index: 1000;
+}
+.day-slot-active {
+    .date {
+        color: var(--strava-orange);
+    }
+    div {
+        color: var(--strava-orange);
+    }
+}
+
+
+
+.task-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+
+
+.schedule-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .week-container {
+        display: block; /* Switch to block for mobile view */
+    }
+    .day-slot {
+        height: auto; /* Adjust height for mobile view */
+        border: 1px solid #ccc; /* Solid borders for mobile view */
+        margin-bottom: 10px; /* Space between days on mobile */
+    }
+}
+
+
+/* General form container styling */
+.form-container {
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 400px; /* Limit the width of the form */
+    margin: auto; /* Center the form horizontally */
+  }
+  
+  /* Header styling */
+  .form-container h1 {
+    font-size: 24px; /* Font size for the header */
+    margin-bottom: 20px; /* Space below the header */
+    text-align: center; /* Center align the header text */
+    color: black;
+  }
+  
+  /* Input field styling */
+  .input-field {
+    width: 100%; /* Full width for the input fields */
+    padding: 10px; /* Inner padding for the input fields */
+    margin: 10px 0; /* Space above and below each input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size for input text */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  /* Input field focus styling */
+  .input-field:focus {
+    border-color: #ff5c00; /* Change border color on focus */
+  }
+  
+  /* Button styling */
+  .add-button {
+    background-color: #ff5c00; /* Button background color */
+    color: white; /* Text color for the button */
+    padding: 10px; /* Inner padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  /* Button hover styling */
+  .add-button:hover {
+    background-color: #e55b00; /* Darker shade on hover */
+  }
+  
+
+.underline {
+    border: 0; /* Remove default borders */
+    border-bottom-width: 2px; /* Set the thickness of the bottom border */
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, #FC5200 70%, #000000 100%) 1;
+}
+.tasks {
+    display: flex;
+    flex: auto;
+    gap: 10px;
+    background-color: #E5E5E5;
+    padding: 20px;
+    border-radius: 40px;
+}
+.box:hover {
+    outline: 1px solid #FC5200;
+    box-sizing: border-box;
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+.box, .task {
+    transition: transform 0.5s;
+    width: fit-content;
+    height: fit-content;
+    background-color: white; 
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: grab;
+    text-align: center;
+    user-select: none;
+    .circle {
+        width: 30px;
+        height: 30px;
+        background-color: #D9D9D9;
+        border-radius: 2rem;
+    }
+    strong {
+        margin: 0;
+        display: block;
+        font-size: 30px;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+    p {
+        margin: 0;
+    }
+    .hh {
+        display: flex;
+        flex-direction: column;
+        border-image: linear-gradient(to right, #FC5200 20%, #000000 100%) 1;
+        width: 80%;
+        p {
+            width: fit-content;
+        }
+        .distance {
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 600;
+            margin-top: 4px;
+            letter-spacing: -1px;
+        }
+        .description {
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 6px;
+            font-size: 14px;
+            letter-spacing: -0.5px;
+            text-align: left;
+        }
+    }
+    .h {
+        display: flex;
+        .time, .tempo {
+            width: 50%;
+            margin-bottom: 6px;
+            .x {
+                margin-top: 4px;
+                font-size: 25px;
+                font-weight: 600;
+                width: fit-content;
+                line-height: 1;
+            }
+            p{
+                font-size: 14px;
+                width: fit-content;
+                line-height: 1;
+            }
+        }
+    }
+    
+}
+.dragging {
+    opacity: 0.5;
+    border-radius: 20px;
+}
+.selected {
+    border: 2px solid #FC5200;
+    .underline {
+        border-image: linear-gradient(to right, #DADADA 70%, #DADADA  100%) 1;
+        border-bottom-width: 1px;
+    }
+    .circle {
+        background-color: #FC5200;
+    }
+}

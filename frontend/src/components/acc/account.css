@@ -1,0 +1,39 @@
+.settings-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0px;
+    h1 {
+        width: 50%;
+    }
+    section {
+        width: 50%;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+.edit-buttons {
+    display: flex;
+    gap: 5px;
+}
+.settings-section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    h2 {
+        width: fit-content;
+    }
+    button {
+        height: 30px;
+        width: 60px;
+        font-size: 12px;
+        
+    }
+}

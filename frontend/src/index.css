@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+  --strava-orange: #FC5200;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+P {
+  color: black;
+  width: fit-content;
+}
+label {
+  color: black;
+  padding-right: 10px;
+}
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+  transition: 0.2s;
+}
+a:hover {
+  color: var(--strava-orange);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid var(--strava-orange);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--strava-orange);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline: none;
+}
+button.small-button {
+  height: 25px;
+  width: 60px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid var(--strava-orange);
+  padding: 0;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline: none;
+}
+button.main-button {
+  background-color: #FC5200;
+  border: none;
+  color: white;
+}
+button.secondary-button {
+  border: 1px solid var(--strava-orange);
+  background-color: transparent;
+}
+input {
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #D9D9D9;
+  color: black;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: var(--strava-orange);
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
